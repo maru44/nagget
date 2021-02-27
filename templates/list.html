@@ -1,0 +1,24 @@
+{{ template "header" .Header }}
+<main>
+  <div class="mainZone">
+    <div class="pt30">
+      {{ range .Items }}
+        <div class="mb50">
+          <div class="flexNormal spBw f14">
+              <div>{{ .Gender }}</div>
+              <div>{{ .CreatedAt.Format "2006.01/02" }}</div>
+          </div>
+          <div class="mt5 _con">{{ .Content }}</div>
+          <div class="mt10 flexNormal alFEnd">
+            <span class="mla">{{ .Good }}</span>
+            <span id="good_{{ .ID }}" class="goodBtn pl5 cursorP pointer60 f20">&hearts;</span>
+          </div>
+          <!--
+            <a href="/api/detail/{{ .ID }}" class="hrefBoxIn"></a>
+          -->
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</main>
+{{ template "footer" }}

@@ -1,0 +1,34 @@
+{{ template "header" .Header }}
+<main>
+    <div class="mainZone">
+        <div>
+            <div class="field">
+                <label for="kind">種類</label>
+                <div id="kind">
+                    {{ if eq .Kind "iina" }}
+                      あったらいいな
+                    {{ else if eq .Kind "huben" }}
+                      不便
+                    {{ else }}
+                      困ったこと
+                    {{ end }}
+                </div>
+            </div>
+            <div class="field mt10">
+                <label for="content">内容</label>
+                <div>{{ .Content }}</div>
+            </div>
+            <div class="mt10 field">
+                <label for="gender">性別</label>
+                <div id="gender">
+                  {{ if eq .Gender "men" }}
+                    男性
+                  {{ else }}
+                    女性
+                  {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ template "footer" }}

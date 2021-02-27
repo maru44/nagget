@@ -1,0 +1,76 @@
+{{ template "header" .Header }}
+<main>
+    <div class="modal off"></div>
+    <div class="mainZone">
+        <form action="" method="post" class="pt30">
+            <!-- confirm modal content -->
+            <div class="modalCon modalConConfirm off">
+                <h4 class="mt20 textCen">内容確認</h4>
+                <div class="mt30">
+                    <h5>種類</h5>
+                    <div class="mt5" id="confirmKind"></div>
+                </div>
+                <div class="mt10">
+                    <h5>内容</h5>
+                    <div class="mt5" id="confirmCON">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="mt10">
+                    <h5>性別</h5>
+                    <div class="mt5" id="confirmGender"></div>
+                </div>
+                <div class="mt60">
+                    <!--
+                        <button class="mla mra uploadBtn" type="submit">送信する</button>
+                    -->
+                    <div class="mla mra uploadBtn textCen" id="posting">送信する</div>
+                </div>
+            </div>
+            <!-- confirm modal content end -->
+            <div class="field">
+                <label for="kind">種類</label>
+                <div id="kind">
+                    <div class="">
+                        <input id="iina" name="kinds" class="kindInp" type="checkbox" value="iina">
+                        <label class="inpLabel" for="iina">あったらいいな</label>
+                    </div>
+                    <div class="mt5">
+                        <input id="huben" name="kinds" class="kindInp" type="checkbox" value="huben">
+                        <label class="inpLabel" for="huben">不便</label>
+                    </div>
+                    <div class="mt5">
+                        <input id="komari" name="kinds" class="kindInp" type="checkbox" value="komari">
+                        <label class="inpLabel" for="komari">困ったこと</label>
+                    </div>
+                </div>
+            </div>
+            <div class="field mt10">
+                <label for="CON">内容</label>
+                <textarea id="CON" maxlength="600" rows="9" type="text" name="content"></textarea>
+            </div>
+            <div class="mt10 field">
+                <label for="gender">性別</label>
+                <div id="gender">
+                  <div class="flexNormal spEv mt15">
+                      <div class="">
+                        <input id="menGender" class="genderInp" type="checkbox" name="genderSelect" value="men">
+                        <label class="inpLabel" for="menGender">男性</label>
+                      </div>
+                      <div class="">
+                        <input id="womenGender" class="genderInp" type="checkbox" name="genderSelect" value="women">
+                        <label class="inpLabel" for="womenGender">女性</label>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="mt60">
+                <!--
+                    <button class="mla mra uploadBtn" type="submit">送信する</button>
+                -->
+                <div class="mla mra uploadBtn textCen disabled" id="openConfirm">送信する</div>
+            </div>
+        </form>
+    </div>
+</main>
+{{ template "footer" }}

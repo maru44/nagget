@@ -1,0 +1,44 @@
+{{ define "header" }}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- ogp start -->
+    <meta property="og:url" content="https://nagget.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="完全無料の目安箱">
+    <meta property="og:title" content="Nagget">
+    <meta property="og:image" content="">
+    <!-- ogp end -->
+    <link href="/static/blog/main.css" type="text/css" rel="stylesheet"/>
+    <script src="/static/utils/jquery-3.5.1.min.js"></script>
+    <script src="/static/blog/main.js"></script>
+    <title>Nagget | {{ .Pagetitle }}</title>
+</head>
+<body>
+  <header>
+    <div class="header">
+        <h1>
+            <span class="hrefBox">
+                Nagget
+                <a href="/" class="hrefBoxIn"></a>
+            </span>
+        </h1>
+    </div>
+    <div class="f12 flexNormal textCen subHeader alCen">
+      <div class="hrefBox">
+        あったらいいな
+        <a href="/iina" class="hrefBoxIn"></a>
+      </div>
+      <div class="hrefBox">
+        困ったこと
+        <a href="/komatta" class="hrefBoxIn"></a>
+      </div>
+      <div class="hrefBox">
+        不便
+        <a href="/huben" class="hrefBoxIn"></a>
+      </div>
+    </div>
+  </header>
+{{ end }}
